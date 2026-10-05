@@ -1,0 +1,43 @@
+<!doctype html>
+<!-- Social preview template (1200×630). Edit the text, then regenerate assets/img/og-image.png (see README). -->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <style>
+    @font-face { font-family: "Geist"; font-weight: 300 700; font-display: block; src: url("../assets/fonts/geist-latin.woff2") format("woff2"); }
+    @font-face { font-family: "Instrument Serif"; font-style: italic; font-weight: 400; font-display: block; src: url("../assets/fonts/instrument-serif-italic-latin.woff2") format("woff2"); }
+    html, body { margin: 0; width: 1200px; height: 630px; overflow: hidden; background: #05060a; }
+    body { position: relative; font-family: Geist, system-ui, sans-serif; color: #eef0f6; -webkit-font-smoothing: antialiased; }
+    .grid { position: absolute; inset: 0; background-image: linear-gradient(rgba(255,255,255,.05) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.05) 1px, transparent 1px); background-size: 56px 56px; -webkit-mask-image: radial-gradient(ellipse 75% 85% at 72% 20%, #000 15%, transparent 72%); mask-image: radial-gradient(ellipse 75% 85% at 72% 20%, #000 15%, transparent 72%); }
+    .glow-a { position: absolute; width: 820px; height: 620px; left: -260px; top: -300px; background: radial-gradient(closest-side, rgba(124,248,214,.22), transparent); }
+    .glow-b { position: absolute; width: 940px; height: 720px; right: -320px; top: -230px; background: radial-gradient(closest-side, rgba(181,155,255,.26), transparent); }
+    .cube { position: absolute; right: 86px; top: 70px; width: 210px; height: 210px; filter: drop-shadow(0 0 40px rgba(124,248,214,.25)); }
+    .wrap { position: absolute; inset: 68px 84px 64px; display: flex; flex-direction: column; }
+    .brand { display: flex; align-items: center; gap: 14px; font-size: 27px; font-weight: 600; letter-spacing: -.02em; }
+    h1 { margin: auto 0 0; max-width: 920px; font-size: 94px; line-height: .98; letter-spacing: -.055em; font-weight: 560; }
+    em { font-family: "Instrument Serif", serif; font-style: italic; font-weight: 400; font-size: 1.1em; letter-spacing: -.03em; padding-right: .08em; background: linear-gradient(100deg, #7cf8d6, #7ab8ff 48%, #b59bff); -webkit-background-clip: text; background-clip: text; color: transparent; }
+    .meta { display: flex; align-items: center; justify-content: space-between; margin-top: 44px; padding-top: 28px; border-top: 1px solid rgba(255,255,255,.1); font-size: 24px; color: #a6abbb; }
+    .meta strong { color: #eef0f6; font-weight: 600; }
+    .pill { display: inline-flex; align-items: center; gap: 12px; padding: 10px 18px; border-radius: 999px; border: 1px solid rgba(255,255,255,.14); background: rgba(255,255,255,.04); font-size: 20px; color: #eef0f6; }
+    .dot { width: 10px; height: 10px; border-radius: 50%; background: #4ade80; box-shadow: 0 0 0 6px rgba(74,222,128,.15); }
+  </style>
+</head>
+<body>
+  <svg width="0" height="0" style="position:absolute">
+    <defs>
+      <linearGradient id="g" x1="3" y1="3" x2="29" y2="29" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#7cf8d6"/><stop offset=".5" stop-color="#7ab8ff"/><stop offset="1" stop-color="#b59bff"/></linearGradient>
+      <symbol id="logo" viewBox="0 0 32 32"><path d="M16 2.8 27.4 9.4 16 16 4.6 9.4Z" fill="url(#g)" opacity=".22"/><path d="M16 2.8 27.4 9.4v13.2L16 29.2 4.6 22.6V9.4Z" fill="none" stroke="url(#g)" stroke-width="2" stroke-linejoin="round"/><path d="M4.6 9.4 16 16l11.4-6.6M16 16v13.2" fill="none" stroke="url(#g)" stroke-width="2" stroke-linejoin="round"/></symbol>
+    </defs>
+  </svg>
+  <div class="grid"></div><div class="glow-a"></div><div class="glow-b"></div>
+  <svg class="cube"><use href="#logo"/></svg>
+  <div class="wrap">
+    <div class="brand"><svg width="40" height="40"><use href="#logo"/></svg><span>Max Allen</span></div>
+    <h1>From whiteboard to mainnet, <em>securely.</em></h1>
+    <div class="meta">
+      <div><strong>Senior Blockchain Engineer</strong> · Smart contracts &amp; DeFi</div>
+      <div class="pill"><span class="dot"></span>Available for projects · Q4 2026</div>
+    </div>
+  </div>
+</body>
+</html>

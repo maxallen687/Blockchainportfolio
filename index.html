@@ -1,0 +1,1359 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+
+  <!-- EDIT: name, title and description (also update og:/twitter: tags below) -->
+  <title>Max Allen — Senior Blockchain Engineer · Smart Contracts &amp; dApps</title>
+  <meta name="description" content="Senior blockchain engineer helping founders and protocol teams design, build and launch secure, audit-ready smart contracts and full-stack dApps on Ethereum, L2s and Solana.">
+  <meta name="author" content="Max Allen">
+  <meta name="theme-color" content="#05060a">
+  <meta name="color-scheme" content="dark">
+  <link rel="canonical" href="https://yourdomain.com/">
+
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://yourdomain.com/">
+  <meta property="og:site_name" content="Max Allen">
+  <meta property="og:title" content="Max Allen — Senior Blockchain Engineer">
+  <meta property="og:description" content="Secure smart contracts and full-stack dApps, from whiteboard to mainnet. Available for new projects.">
+  <meta property="og:image" content="https://yourdomain.com/assets/img/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Max Allen — Senior Blockchain Engineer. From whiteboard to mainnet, securely.">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Max Allen — Senior Blockchain Engineer">
+  <meta name="twitter:description" content="Secure smart contracts and full-stack dApps, from whiteboard to mainnet.">
+  <meta name="twitter:image" content="https://yourdomain.com/assets/img/og-image.png">
+
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+  <link rel="manifest" href="site.webmanifest">
+
+  <!-- Self-hosted fonts (Geist, Geist Mono, Instrument Serif · SIL OFL): no third-party requests -->
+  <link rel="preload" href="assets/fonts/geist-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/instrument-serif-italic-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="assets/css/style.css">
+
+  <script>
+    // Scroll-reveal styles apply only when JS runs; content falls back to static if the main script never loads.
+    document.documentElement.classList.add('js');
+    setTimeout(function () { if (!window.__portfolioReady) document.documentElement.classList.remove('js'); }, 4000);
+  </script>
+
+  <!-- EDIT: structured data for search engines -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Max Allen",
+    "jobTitle": "Senior Blockchain Engineer",
+    "url": "https://yourdomain.com/",
+    "image": "https://yourdomain.com/assets/img/og-image.png",
+    "email": "mailto:maxallen03919@gmail.com",
+    "sameAs": [
+      "https://github.com/maxallen687",
+      "https://t.me/maxallen919"
+    ],
+    "knowsAbout": ["Solidity", "Smart contracts", "Smart contract security", "DeFi", "Ethereum", "Layer 2", "Solana", "Rust", "TypeScript", "Web3"]
+  }
+  </script>
+</head>
+
+<body>
+  <!-- Icon sprite -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+    <defs>
+      <linearGradient id="brand-grad" x1="3" y1="3" x2="29" y2="29" gradientUnits="userSpaceOnUse">
+        <stop offset="0" stop-color="#7cf8d6"/><stop offset=".5" stop-color="#7ab8ff"/><stop offset="1" stop-color="#b59bff"/>
+      </linearGradient>
+    </defs>
+    <symbol id="i-logo" viewBox="0 0 32 32"><path d="M16 2.8 27.4 9.4v13.2L16 29.2 4.6 22.6V9.4Z" fill="none" stroke="url(#brand-grad)" stroke-width="2.2" stroke-linejoin="round"/><path d="M4.6 9.4 16 16l11.4-6.6M16 16v13.2" fill="none" stroke="url(#brand-grad)" stroke-width="2.2" stroke-linejoin="round"/><path d="M16 2.8 27.4 9.4 16 16 4.6 9.4Z" fill="url(#brand-grad)" opacity=".22"/></symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></symbol>
+    <symbol id="i-arrow-up-right" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></symbol>
+    <symbol id="i-shield" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/><path d="m9 12 2 2 4-4"/></symbol>
+    <symbol id="i-file-code" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7z"/><path d="M14 2v4a2 2 0 0 0 2 2h4"/><path d="m10 12.5-2 2.5 2 2.5"/><path d="m14 12.5 2 2.5-2 2.5"/></symbol>
+    <symbol id="i-trending" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 7 13.5 15.5 8.5 10.5 2 17"/><path d="M16 7h6v6"/></symbol>
+    <symbol id="i-window" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M2 8h20"/><path d="M6 4v4"/><path d="M10 4v4"/></symbol>
+    <symbol id="i-gauge" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m12 14 4-4"/><path d="M3.34 19a10 10 0 1 1 17.32 0"/></symbol>
+    <symbol id="i-link" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></symbol>
+    <symbol id="i-mail" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></symbol>
+    <symbol id="i-send" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14.54 21.69a.5.5 0 0 0 .94-.03l6.5-19a.5.5 0 0 0-.64-.63l-19 6.5a.5.5 0 0 0-.02.93l7.93 3.18a2 2 0 0 1 1.11 1.11z"/><path d="m21.85 2.15-10.94 10.94"/></symbol>
+    <symbol id="i-calendar" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M8 2v4"/><path d="M16 2v4"/><rect width="18" height="18" x="3" y="4" rx="2"/><path d="M3 10h18"/><path d="m9 16 2 2 4-4"/></symbol>
+    <symbol id="i-search" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7.5"/><path d="m21 21-4.3-4.3"/></symbol>
+    <symbol id="i-copy" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect width="14" height="14" x="8" y="8" rx="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></symbol>
+    <symbol id="i-lock" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="11" x="3" y="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></symbol>
+    <symbol id="i-replay" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"/><path d="M3 3v5h5"/></symbol>
+    <symbol id="i-clock" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></symbol>
+    <symbol id="i-pin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 5-5.54 10.19-7.4 11.8a1 1 0 0 1-1.2 0C9.54 20.19 4 15 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></symbol>
+    <symbol id="i-target" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></symbol>
+    <symbol id="i-flask" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M10 2v7.53a2 2 0 0 1-.21.9L4.72 20.55a1 1 0 0 0 .9 1.45h12.76a1 1 0 0 0 .9-1.45l-5.07-10.12A2 2 0 0 1 14 9.53V2"/><path d="M8.5 2h7"/><path d="M7 16h10"/></symbol>
+    <symbol id="i-message" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></symbol>
+    <symbol id="i-user" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="5"/><path d="M20 21a8 8 0 0 0-16 0"/></symbol>
+    <symbol id="i-box" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z"/><path d="m3.3 7 8.7 5 8.7-5"/><path d="M12 22V12"/></symbol>
+    <symbol id="i-layers" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83Z"/><path d="m22 17.65-9.17 4.16a2 2 0 0 1-1.66 0L2 17.65"/><path d="m22 12.65-9.17 4.16a2 2 0 0 1-1.66 0L2 12.65"/></symbol>
+    <symbol id="i-route" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="19" r="3"/><path d="M9 19h8.5a3.5 3.5 0 0 0 0-7h-11a3.5 3.5 0 0 1 0-7H15"/><circle cx="18" cy="5" r="3"/></symbol>
+    <symbol id="i-help" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><path d="M12 17h.01"/></symbol>
+    <symbol id="i-briefcase" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M16 20V4a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/><rect width="20" height="14" x="2" y="6" rx="2"/></symbol>
+    <symbol id="i-enter" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 10-5 5 5 5"/><path d="M20 4v7a4 4 0 0 1-4 4H4"/></symbol>
+    <symbol id="i-zap" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 14a1 1 0 0 1-.78-1.63l9.9-10.2a.5.5 0 0 1 .86.46l-1.92 6.02A1 1 0 0 0 13 10h7a1 1 0 0 1 .78 1.63l-9.9 10.2a.5.5 0 0 1-.86-.46l1.92-6.02A1 1 0 0 0 11 14z"/></symbol>
+    <symbol id="i-github" viewBox="0 0 24 24"><path fill="currentColor" d="M12 .5A11.5 11.5 0 0 0 8.36 22.9c.58.1.79-.25.79-.56v-2c-3.2.7-3.87-1.37-3.87-1.37-.52-1.33-1.28-1.68-1.28-1.68-1.04-.71.08-.7.08-.7 1.15.08 1.76 1.19 1.76 1.19 1.03 1.76 2.69 1.25 3.35.96.1-.75.4-1.25.73-1.54-2.55-.29-5.24-1.28-5.24-5.69 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.17 1.18a11 11 0 0 1 5.77 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.84 1.19 3.1 0 4.42-2.69 5.39-5.25 5.68.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56A11.5 11.5 0 0 0 12 .5Z"/></symbol>
+    <symbol id="i-telegram" viewBox="0 0 24 24"><path fill="currentColor" d="M21.94 4.3 18.7 19.6c-.24 1.08-.88 1.35-1.79.84l-4.94-3.64-2.38 2.29c-.26.26-.48.48-.99.48l.35-5.02 9.14-8.26c.4-.35-.09-.55-.61-.2L6.18 13.2l-4.87-1.53c-1.06-.33-1.08-1.06.22-1.57L20.55 2.8c.88-.33 1.65.2 1.39 1.5"/></symbol>
+    <symbol id="i-eth" viewBox="0 0 24 24"><path fill="currentColor" d="M11.99 1.5 5.5 12.26l6.49 3.84 6.5-3.84z" opacity=".95"/><path fill="currentColor" d="m5.5 13.5 6.49 9 6.51-9-6.51 3.84z" opacity=".65"/></symbol>
+  </svg>
+
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div class="grain" aria-hidden="true"></div>
+
+  <!-- ============================== NAV ============================== -->
+  <header class="nav" id="nav">
+    <div class="nav__inner">
+      <a class="brand" href="#top" aria-label="Max Allen — back to top">
+        <svg class="brand__mark" aria-hidden="true"><use href="#i-logo"/></svg>
+        <!-- EDIT: your name (or ENS handle) -->
+        <span class="brand__name">Max Allen</span>
+      </a>
+
+      <nav class="nav__links" aria-label="Primary">
+        <a href="#services">Services</a>
+        <a href="#work">Work</a>
+        <a href="#craft">Code</a>
+        <a href="#process">Process</a>
+        <a href="#about">About</a>
+        <a href="#faq">FAQ</a>
+      </nav>
+
+      <div class="nav__actions">
+        <button class="kbd-btn" type="button" data-palette-open aria-keyshortcuts="Control+K Meta+K">
+          <svg class="icon" aria-hidden="true"><use href="#i-search"/></svg><span class="sr-only">Open command menu</span>
+          <kbd><span data-mod-key>⌘</span>K</kbd>
+        </button>
+        <a class="btn btn--primary btn--sm nav__cta" href="#contact">Hire me</a>
+        <button class="nav__toggle" type="button" aria-expanded="false" aria-controls="mobile-menu" aria-label="Open menu">
+          <span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <div class="mobile-menu" id="mobile-menu" hidden>
+    <nav class="mobile-menu__links" aria-label="Mobile">
+      <a href="#services"><span>01</span>Services</a>
+      <a href="#work"><span>02</span>Work</a>
+      <a href="#craft"><span>03</span>Code</a>
+      <a href="#process"><span>04</span>Process</a>
+      <a href="#about"><span>05</span>About</a>
+      <a href="#faq"><span>06</span>FAQ</a>
+    </nav>
+    <div class="mobile-menu__foot">
+      <a class="btn btn--primary btn--lg btn--block" href="#contact">Start a project <svg class="icon icon--arrow" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+      <p class="mobile-menu__status"><span class="status-dot" aria-hidden="true"></span>Available for new projects · Q4 2026</p>
+    </div>
+  </div>
+
+  <main id="main">
+    <!-- ============================== HERO ============================== -->
+    <section class="hero" id="top" aria-labelledby="hero-title">
+      <div class="hero__bg" aria-hidden="true">
+        <div class="hero__grid"></div>
+        <div class="hero__glow hero__glow--a"></div>
+        <div class="hero__glow hero__glow--b"></div>
+        <canvas class="hero__canvas" id="network"></canvas>
+      </div>
+
+      <div class="container hero__inner">
+        <div class="hero__copy">
+          <!-- EDIT: availability -->
+          <a class="status-pill hero-in" href="#contact" style="--d: 0ms">
+            <span class="status-dot" aria-hidden="true"></span>
+            <span class="status-pill__text">Available for new projects · Q4 2026</span>
+            <span class="status-pill__cta">Book a call <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></span>
+          </a>
+
+          <!-- EDIT: headline. Each word sits in its own span for the entrance animation; --i sets the stagger order. -->
+          <h1 class="hero__title" id="hero-title"><span class="word"><span class="word__inner" style="--i: 0">From</span></span> <span class="word"><span class="word__inner" style="--i: 1">whiteboard</span></span> <span class="word"><span class="word__inner" style="--i: 2">to</span></span> <span class="word"><span class="word__inner" style="--i: 3">mainnet,</span></span> <em class="accent"><span class="word"><span class="word__inner" style="--i: 4">securely.</span></span></em></h1>
+
+          <p class="hero__lead hero-in" style="--d: 240ms">
+            I'm a senior blockchain engineer helping founders and protocol teams design, build and launch
+            <strong>audit-ready smart contracts</strong> and full-stack dApps on Ethereum, L2s and Solana.
+          </p>
+
+          <div class="hero__ctas hero-in" style="--d: 330ms">
+            <a class="btn btn--primary btn--lg" href="#contact" data-magnetic>
+              Start a project <svg class="icon icon--arrow" aria-hidden="true"><use href="#i-arrow"/></svg>
+            </a>
+            <a class="btn btn--ghost btn--lg" href="#work">View selected work</a>
+          </div>
+
+          <ul class="hero__assurances hero-in" style="--d: 420ms">
+            <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Replies within 24h</li>
+            <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>NDA-friendly</li>
+            <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Fixed-price quotes</li>
+          </ul>
+        </div>
+
+        <div class="hero__visual hero-in" style="--d: 180ms">
+          <div class="hero__stage" data-tilt>
+            <div class="window terminal">
+              <div class="window-bar">
+                <span class="dots" aria-hidden="true"><i></i><i></i><i></i></span>
+                <span class="window-bar__title">~/airdrop — zsh</span>
+                <button class="window-bar__action" type="button" data-terminal-replay aria-label="Re-run the terminal animation">
+                  <svg class="icon" aria-hidden="true"><use href="#i-replay"/></svg><span>Re-run</span>
+                </button>
+              </div>
+              <!-- Real output from the Foundry suite shown in the “Code” section. -->
+              <div class="terminal__body" id="terminal-output" role="img" aria-label="Terminal: Foundry test suite with 10,000 fuzz runs per test, all tests passing, 100% coverage.">
+                <span class="t-line" data-cmd><span class="t-path">~/airdrop</span> <span class="t-prompt">❯</span> <span class="t-cmd">forge test</span></span>
+                <span class="t-line t-dim" data-delay="420">[⠊] Compiling 34 files with Solc 0.8.28</span>
+                <span class="t-line t-dim" data-delay="760">[⠒] Solc 0.8.28 finished in 1.21s</span>
+                <span class="t-line t-ok" data-delay="240">Compiler run successful!</span>
+                <span class="t-line" data-delay="120"> </span>
+                <span class="t-line" data-delay="300">Ran 2 tests for <span class="t-file">test/MerkleDistributor.t.sol</span></span>
+                <span class="t-line" data-delay="1100"><span class="t-pass">[PASS]</span> testFuzz_ClaimOnce(uint256,address,uint96)</span>
+                <span class="t-line t-dim" data-delay="60">       (runs: 10000, μ: 201056, ~: 202516)</span>
+                <span class="t-line" data-delay="420"><span class="t-pass">[PASS]</span> testFuzz_RejectsForgedProof(bytes32,uint96)</span>
+                <span class="t-line t-dim" data-delay="60">       (runs: 10000, μ: 35384, ~: 35353)</span>
+                <span class="t-line" data-delay="280">Suite result: <span class="t-ok">ok</span>. <span class="t-ok">2 passed</span>; 0 failed; 0 skipped</span>
+                <span class="t-line" data-delay="120"> </span>
+                <span class="t-line" data-cmd><span class="t-path">~/airdrop</span> <span class="t-prompt">❯</span> <span class="t-cmd">forge coverage</span></span>
+                <span class="t-line" data-delay="1200"><span class="t-file">src/MerkleDistributor.sol</span></span>
+                <span class="t-line" data-delay="90">  <span class="t-ok">100.00%</span> lines (13/13) · <span class="t-ok">100.00%</span> branches (2/2)</span>
+              </div>
+            </div>
+
+            <!-- Live data from Ethereum mainnet (falls back to a clearly-labelled simulation offline) -->
+            <div class="float-card float-card--chain" id="chain-card">
+              <div class="chain__head">
+                <span class="chain__net"><svg class="icon" aria-hidden="true"><use href="#i-eth"/></svg>Ethereum</span>
+                <span class="chain__status" data-chain-status data-state="loading"><i aria-hidden="true"></i><span>Syncing</span></span>
+              </div>
+              <div class="chain__label">Latest block</div>
+              <div class="chain__block"><span data-chain-block>#—</span></div>
+              <div class="chain__foot">
+                <div>
+                  <div class="chain__label">Base fee</div>
+                  <div class="chain__gas" data-chain-gas>— gwei</div>
+                </div>
+                <svg class="chain__spark" viewBox="0 0 120 36" preserveAspectRatio="none" aria-hidden="true">
+                  <defs>
+                    <linearGradient id="spark-fill" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#7cf8d6" stop-opacity=".35"/><stop offset="1" stop-color="#7cf8d6" stop-opacity="0"/></linearGradient>
+                  </defs>
+                  <path data-chain-spark-fill d="" fill="url(#spark-fill)"/>
+                  <path data-chain-spark d="" fill="none" stroke="#7cf8d6" stroke-width="1.5" vector-effect="non-scaling-stroke" stroke-linejoin="round" stroke-linecap="round"/>
+                </svg>
+              </div>
+            </div>
+
+            <div class="float-card float-card--audit">
+              <span class="audit__icon"><svg class="icon" aria-hidden="true"><use href="#i-shield"/></svg></span>
+              <div>
+                <p class="audit__title">Audit-ready by default</p>
+                <ul class="audit__list">
+                  <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Fuzz tested · 10,000 runs</li>
+                  <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>100% line &amp; branch coverage</li>
+                  <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Type-checked front-end</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="container">
+        <!-- EDIT: replace with your real numbers, then delete data-sample -->
+        <dl class="stats" data-stagger="90" data-sample="Sample figures">
+          <div class="stat" data-reveal>
+            <dt>TVL secured by contracts I've written</dt>
+            <dd><span data-count="150" data-prefix="$" data-suffix="M+">$150M+</span></dd>
+          </div>
+          <div class="stat" data-reveal>
+            <dt>Smart contracts shipped to mainnet</dt>
+            <dd><span data-count="70" data-suffix="+">70+</span></dd>
+          </div>
+          <div class="stat" data-reveal>
+            <dt>Critical findings in external audits</dt>
+            <dd><span data-count="0">0</span></dd>
+          </div>
+          <div class="stat" data-reveal>
+            <dt>Building on Ethereum since 2019</dt>
+            <dd><span data-count="7" data-suffix=" yrs">7 yrs</span></dd>
+          </div>
+        </dl>
+
+        <div class="marquee" data-reveal>
+          <p class="marquee__label">Shipping on</p>
+          <div class="marquee__track">
+            <div class="marquee__inner">
+              <ul class="marquee__list">
+                <li>Ethereum</li><li>Arbitrum</li><li>Optimism</li><li>Base</li><li>Polygon</li><li>zkSync</li><li>Scroll</li><li>Linea</li><li>Avalanche</li><li>BNB Chain</li><li>Solana</li>
+              </ul>
+              <ul class="marquee__list" aria-hidden="true">
+                <li>Ethereum</li><li>Arbitrum</li><li>Optimism</li><li>Base</li><li>Polygon</li><li>zkSync</li><li>Scroll</li><li>Linea</li><li>Avalanche</li><li>BNB Chain</li><li>Solana</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================== SERVICES ============================== -->
+    <section class="section" id="services" aria-labelledby="services-title">
+      <div class="container">
+        <header class="section-head section-head--split">
+          <p class="eyebrow" data-scramble>01 / Services</p>
+          <h2 class="section-title" id="services-title" data-reveal>Everything your protocol needs, <em class="accent">end to end.</em></h2>
+          <p class="section-lead" data-reveal>From the first architecture sketch to post-launch monitoring: one senior engineer accountable for the whole stack, so nothing falls between the cracks.</p>
+        </header>
+
+        <div class="bento">
+          <!-- Smart contracts -->
+          <article class="card spot bento__item bento__item--contracts" data-reveal>
+            <div class="bento__text">
+              <span class="card__icon"><svg class="icon" aria-hidden="true"><use href="#i-file-code"/></svg></span>
+              <h3>Smart contract development</h3>
+              <p>Production-grade Solidity and Rust: tokens, vaults, governance, account abstraction and upgradeable systems, built on battle-tested standards and documented for auditors.</p>
+            </div>
+            <div class="bento__visual contracts-viz" aria-hidden="true">
+              <div class="mini-code">
+                <div><span class="tk-kw">contract</span> <span class="tk-ty">Vault</span> <span class="tk-kw">is</span> <span class="tk-ty">ERC4626</span>, <span class="tk-ty">Ownable2Step</span> {</div>
+                <div class="mini-code__c">    // upgrade-safe · gas-lean · tested</div>
+                <div>}</div>
+              </div>
+              <ul class="standards">
+                <li>ERC-20</li><li>ERC-721A</li><li>ERC-1155</li><li>ERC-4626</li><li>ERC-4337</li><li>ERC-2535</li><li>ERC-3643</li><li>EIP-712</li><li>EIP-2612</li><li>UUPS</li>
+              </ul>
+            </div>
+          </article>
+
+          <!-- Security -->
+          <article class="card spot bento__item bento__item--security" data-reveal>
+            <div class="bento__text">
+              <span class="card__icon"><svg class="icon" aria-hidden="true"><use href="#i-shield"/></svg></span>
+              <h3>Security reviews &amp; audit prep</h3>
+              <p>Independent reviews that find what tests miss, and a codebase your auditors can move through fast. Fewer findings, shorter audits, safer launches.</p>
+            </div>
+            <div class="radar" aria-hidden="true">
+              <span class="radar__ring"></span><span class="radar__ring"></span><span class="radar__ring"></span>
+              <span class="radar__cross"></span>
+              <span class="radar__sweep"></span>
+              <span class="radar__blip" style="--x: 68%; --y: 30%; --t: .47s"></span>
+              <span class="radar__blip" style="--x: 30%; --y: 64%; --t: 2.61s"></span>
+              <span class="radar__blip" style="--x: 74%; --y: 70%; --t: 1.44s"></span>
+              <span class="radar__core"><svg class="icon"><use href="#i-shield"/></svg></span>
+            </div>
+            <ul class="checklist">
+              <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Manual line-by-line review</li>
+              <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Fuzz &amp; invariant testing</li>
+              <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Symbolic execution (Halmos)</li>
+              <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Static analysis (Slither, Aderyn)</li>
+              <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Audit coordination &amp; fix review</li>
+            </ul>
+          </article>
+
+          <!-- DeFi -->
+          <article class="card spot bento__item bento__item--defi" data-reveal>
+            <span class="card__icon"><svg class="icon" aria-hidden="true"><use href="#i-trending"/></svg></span>
+            <h3>DeFi protocol engineering</h3>
+            <p>AMMs, lending markets, vaults, staking and perps, with MEV-aware design and robust oracle integrations.</p>
+            <div class="bento__visual" aria-hidden="true">
+              <svg class="amm" viewBox="0 0 240 140">
+                <defs>
+                  <linearGradient id="amm-stroke" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#7cf8d6"/><stop offset=".5" stop-color="#7ab8ff"/><stop offset="1" stop-color="#b59bff"/></linearGradient>
+                  <path id="amm-path" d="M24 12 L26.7 31.2 L30.8 50.4 L37.6 69.6 L44.4 81.1 L51.2 88.8 L64.8 98.4 L78.4 104.2 L92 108 L119.2 112.8 L146.4 115.7 L173.6 117.6 L228 120"/>
+                </defs>
+                <path class="amm__axis" d="M18 6 V128 H234"/>
+                <use href="#amm-path" class="amm__curve"/>
+                <circle class="amm__halo" r="10"><animateMotion dur="7s" repeatCount="indefinite" keyPoints="0.15;0.85;0.15" keyTimes="0;0.5;1" calcMode="spline" keySplines="0.45 0 0.55 1;0.45 0 0.55 1"><mpath href="#amm-path"/></animateMotion></circle>
+                <circle class="amm__dot" r="4"><animateMotion dur="7s" repeatCount="indefinite" keyPoints="0.15;0.85;0.15" keyTimes="0;0.5;1" calcMode="spline" keySplines="0.45 0 0.55 1;0.45 0 0.55 1"><mpath href="#amm-path"/></animateMotion></circle>
+                <text class="amm__eq" x="226" y="34" text-anchor="end">x · y = k</text>
+                <text class="amm__lbl" x="230" y="138" text-anchor="end">ETH</text>
+                <text class="amm__lbl" x="18" y="0" text-anchor="middle">USDC</text>
+              </svg>
+            </div>
+          </article>
+
+          <!-- dApps -->
+          <article class="card spot bento__item bento__item--dapps" data-reveal>
+            <span class="card__icon"><svg class="icon" aria-hidden="true"><use href="#i-window"/></svg></span>
+            <h3>Full-stack dApps</h3>
+            <p>Fast, typed front-ends with Next.js, viem and wagmi, plus indexers and wallet UX that non-crypto users understand.</p>
+            <div class="bento__visual" aria-hidden="true">
+              <div class="wallet-mock">
+                <div class="wallet-mock__bar">
+                  <span class="wallet-mock__net"><i></i>Base</span>
+                  <span class="wallet-mock__acct"><span class="wallet-mock__jazz"></span>0x8f3c…a91e</span>
+                </div>
+                <div class="wallet-mock__row"><span>Deposit</span><strong>2,500.00 USDC</strong></div>
+                <div class="wallet-mock__row"><span>Network fee</span><span>≈ $0.004</span></div>
+                <div class="wallet-mock__btn">
+                  <span class="wallet-mock__state wallet-mock__state--1">Sign &amp; deposit</span>
+                  <span class="wallet-mock__state wallet-mock__state--2"><i class="spinner"></i>Confirming…</span>
+                  <span class="wallet-mock__state wallet-mock__state--3"><svg class="icon"><use href="#i-check"/></svg>Confirmed</span>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Gas -->
+          <article class="card spot bento__item bento__item--gas" data-reveal>
+            <span class="card__icon"><svg class="icon" aria-hidden="true"><use href="#i-gauge"/></svg></span>
+            <h3>Gas optimization</h3>
+            <p>Storage packing, calldata tricks and careful assembly where it pays off. Your users feel it on every transaction.</p>
+            <!-- EDIT: sample numbers; swap in a real before/after from your own work -->
+            <div class="bento__visual gas" aria-hidden="true">
+              <div class="gas__row" style="--before: 100%; --after: 39%">
+                <div class="gas__label"><code>mint()</code><span class="gas__delta">−61%</span></div>
+                <div class="gas__bar gas__bar--before"><span>184,201</span></div>
+                <div class="gas__bar gas__bar--after"><span>71,839</span></div>
+              </div>
+              <div class="gas__row" style="--before: 58%; --after: 27%">
+                <div class="gas__label"><code>claim()</code><span class="gas__delta">−53%</span></div>
+                <div class="gas__bar gas__bar--before"><span>106,480</span></div>
+                <div class="gas__bar gas__bar--after"><span>49,912</span></div>
+              </div>
+              <p class="gas__legend"><span class="gas__key gas__key--before"></span>Before <span class="gas__key gas__key--after"></span>After · sample gas report</p>
+            </div>
+          </article>
+
+          <!-- Cross-chain -->
+          <article class="card spot bento__item bento__item--xchain" data-reveal>
+            <span class="card__icon"><svg class="icon" aria-hidden="true"><use href="#i-link"/></svg></span>
+            <h3>Cross-chain &amp; L2</h3>
+            <p>Bridges, omnichain tokens and messaging with CCIP, LayerZero and Hyperlane, plus deployments across every major rollup.</p>
+            <div class="bento__visual" aria-hidden="true">
+              <svg class="xchain" viewBox="0 0 320 160">
+                <defs>
+                  <path id="xc-1" d="M160 80 L280 80"/>
+                  <path id="xc-2" d="M160 80 L220 130"/>
+                  <path id="xc-3" d="M160 80 L100 130"/>
+                  <path id="xc-4" d="M160 80 L40 80"/>
+                  <path id="xc-5" d="M160 80 L100 30"/>
+                  <path id="xc-6" d="M160 80 L220 30"/>
+                  <radialGradient id="xc-hub" cx="50%" cy="50%" r="50%"><stop offset="0" stop-color="#7cf8d6" stop-opacity=".35"/><stop offset="1" stop-color="#7cf8d6" stop-opacity="0"/></radialGradient>
+                </defs>
+                <g class="xchain__lines">
+                  <use href="#xc-1"/><use href="#xc-2"/><use href="#xc-3"/><use href="#xc-4"/><use href="#xc-5"/><use href="#xc-6"/>
+                </g>
+                <g class="xchain__packets">
+                  <circle r="2.4"><animateMotion dur="2.6s" repeatCount="indefinite" begin="0s"><mpath href="#xc-1"/></animateMotion></circle>
+                  <circle r="2.4"><animateMotion dur="3.1s" repeatCount="indefinite" begin=".8s" keyPoints="1;0" keyTimes="0;1"><mpath href="#xc-2"/></animateMotion></circle>
+                  <circle r="2.4"><animateMotion dur="2.8s" repeatCount="indefinite" begin=".3s"><mpath href="#xc-3"/></animateMotion></circle>
+                  <circle r="2.4"><animateMotion dur="3.4s" repeatCount="indefinite" begin="1.2s" keyPoints="1;0" keyTimes="0;1"><mpath href="#xc-4"/></animateMotion></circle>
+                  <circle r="2.4"><animateMotion dur="2.4s" repeatCount="indefinite" begin=".5s"><mpath href="#xc-5"/></animateMotion></circle>
+                  <circle r="2.4"><animateMotion dur="3s" repeatCount="indefinite" begin="1.6s" keyPoints="1;0" keyTimes="0;1"><mpath href="#xc-6"/></animateMotion></circle>
+                </g>
+                <circle cx="160" cy="80" r="44" fill="url(#xc-hub)"/>
+                <g class="xchain__node"><circle cx="280" cy="80" r="17"/><text x="280" y="83">SOL</text></g>
+                <g class="xchain__node"><circle cx="220" cy="130" r="17"/><text x="220" y="133">POL</text></g>
+                <g class="xchain__node"><circle cx="100" cy="130" r="17"/><text x="100" y="133">OP</text></g>
+                <g class="xchain__node"><circle cx="40" cy="80" r="17"/><text x="40" y="83">ARB</text></g>
+                <g class="xchain__node"><circle cx="100" cy="30" r="17"/><text x="100" y="33">BASE</text></g>
+                <g class="xchain__node"><circle cx="220" cy="30" r="17"/><text x="220" y="33">ZK</text></g>
+                <g class="xchain__node xchain__node--hub"><circle cx="160" cy="80" r="22"/><text x="160" y="84">ETH</text></g>
+              </svg>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================== WORK ============================== -->
+    <section class="section section--work" id="work" aria-labelledby="work-title">
+      <div class="container">
+        <header class="section-head section-head--split">
+          <p class="eyebrow" data-scramble>02 / Selected work</p>
+          <h2 class="section-title" id="work-title" data-reveal>Shipped, audited and <em class="accent">battle-tested.</em></h2>
+          <p class="section-lead" data-reveal>A few recent engagements. Client names are withheld under NDA; full case studies, code walkthroughs and references are available on request.</p>
+        </header>
+
+        <!-- EDIT: replace these four sample projects with your own (copy an <article> block to add more) and delete each data-sample -->
+        <div class="work-list" id="work-list">
+          <!-- Project 1 -->
+          <article class="work-card" style="--i: 0; --c1: #7cf8d6; --c2: #7ab8ff">
+            <div class="work-card__inner">
+              <div class="work-card__content" data-reveal>
+                <div class="work-card__meta" data-sample="Sample project">
+                  <span class="work-card__index">01</span>
+                  <span class="tag">DeFi</span>
+                  <span class="work-card__year">2025 · Ethereum · Arbitrum · Base</span>
+                </div>
+                <h3 class="work-card__title">Omnichain Yield Vaults</h3>
+                <p class="work-card__role">Lead smart contract engineer · 5&#8209;month engagement</p>
+                <p class="work-card__desc">A Series-A DeFi team needed vaults that could rebalance across chains without trusting a central operator. I architected an ERC-4626 vault system with permissionless keepers, cross-chain accounting over LayerZero, and an invariant test suite that made two external audits uneventful.</p>
+                <dl class="work-card__metrics">
+                  <div><dt>Peak TVL</dt><dd>$48M</dd></div>
+                  <div><dt>Gas per deposit</dt><dd>−37%</dd></div>
+                  <div><dt>High/critical findings</dt><dd>0</dd></div>
+                </dl>
+                <ul class="work-card__stack">
+                  <li>Solidity</li><li>Foundry</li><li>ERC-4626</li><li>LayerZero</li><li>Chainlink</li><li>The Graph</li>
+                </ul>
+                <a class="link-arrow" href="#contact" data-prefill-message="Hi! I'd love to see the full case study for the Omnichain Yield Vaults project.">Request the full case study <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+              </div>
+              <div class="work-card__visual" aria-hidden="true" data-reveal>
+                <div class="viz-panel">
+                  <div class="viz-panel__head">
+                    <div class="viz-asset">
+                      <span class="viz-asset__icon">$</span>
+                      <div><span class="viz-label">Vault</span><strong>USDC Prime</strong></div>
+                    </div>
+                    <span class="viz-pill viz-pill--up">APY 8.42%</span>
+                  </div>
+                  <div class="viz-kpi">
+                    <span class="viz-label">Total value locked</span>
+                    <strong>$48,210,442</strong>
+                    <span class="viz-delta">▲ 12.4% · 30d</span>
+                  </div>
+                  <svg class="viz-chart" viewBox="0 0 400 150" preserveAspectRatio="none">
+                    <defs><linearGradient id="vault-fill" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#7cf8d6" stop-opacity=".32"/><stop offset="1" stop-color="#7cf8d6" stop-opacity="0"/></linearGradient></defs>
+                    <path d="M0 130 C3.9 129.4 15.6 126.8 23.5 126.4 C31.4 126 39.3 128.8 47.1 127.6 C55 126.4 62.8 121.2 70.6 119.2 C78.4 117.2 86.3 117.4 94.1 115.6 C101.9 113.8 109.8 109 117.6 108.4 C125.4 107.8 133.3 113.4 141.2 112 C149 110.6 156.9 103.2 164.7 100 C172.5 96.8 180.3 93.4 188.2 92.8 C196 92.2 204 98.2 211.8 96.4 C219.7 94.6 227.5 85.4 235.3 82 C243.1 78.6 251 76.6 258.8 76 C266.6 75.4 274.5 80.4 282.4 78.4 C290.3 76.4 298.1 68 305.9 64 C313.7 60 321.6 57.2 329.4 54.4 C337.2 51.6 345 50.8 352.9 47.2 C360.8 43.6 368.6 36.8 376.5 32.8 C384.4 28.8 396.1 24.8 400 23.2 L400 150 L0 150 Z" fill="url(#vault-fill)"/>
+                    <path class="viz-chart__line" d="M0 130 C3.9 129.4 15.6 126.8 23.5 126.4 C31.4 126 39.3 128.8 47.1 127.6 C55 126.4 62.8 121.2 70.6 119.2 C78.4 117.2 86.3 117.4 94.1 115.6 C101.9 113.8 109.8 109 117.6 108.4 C125.4 107.8 133.3 113.4 141.2 112 C149 110.6 156.9 103.2 164.7 100 C172.5 96.8 180.3 93.4 188.2 92.8 C196 92.2 204 98.2 211.8 96.4 C219.7 94.6 227.5 85.4 235.3 82 C243.1 78.6 251 76.6 258.8 76 C266.6 75.4 274.5 80.4 282.4 78.4 C290.3 76.4 298.1 68 305.9 64 C313.7 60 321.6 57.2 329.4 54.4 C337.2 51.6 345 50.8 352.9 47.2 C360.8 43.6 368.6 36.8 376.5 32.8 C384.4 28.8 396.1 24.8 400 23.2"/>
+                  </svg>
+                  <div class="viz-alloc">
+                    <div class="viz-alloc__row"><span>Ethereum</span><span class="viz-bar"><i style="--w: 45%"></i></span><span>45%</span></div>
+                    <div class="viz-alloc__row"><span>Arbitrum</span><span class="viz-bar"><i style="--w: 35%"></i></span><span>35%</span></div>
+                    <div class="viz-alloc__row"><span>Base</span><span class="viz-bar"><i style="--w: 20%"></i></span><span>20%</span></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 2 -->
+          <article class="work-card" style="--i: 1; --c1: #b59bff; --c2: #7ab8ff">
+            <div class="work-card__inner">
+              <div class="work-card__content" data-reveal>
+                <div class="work-card__meta" data-sample="Sample project">
+                  <span class="work-card__index">02</span>
+                  <span class="tag">RWA</span>
+                  <span class="work-card__year">2025 · Ethereum · Polygon</span>
+                </div>
+                <h3 class="work-card__title">Tokenized Treasury Fund</h3>
+                <p class="work-card__role">Smart contract architect · 4&#8209;month engagement</p>
+                <p class="work-card__desc">An asset manager wanted to bring a short-duration treasury fund on-chain without compromising compliance. I built permissioned ERC-3643 tokens with an on-chain identity registry, oracle-driven daily NAV and atomic USDC subscriptions and redemptions.</p>
+                <dl class="work-card__metrics">
+                  <div><dt>Assets tokenized</dt><dd>$26M</dd></div>
+                  <div><dt>Verified investors</dt><dd>1,200+</dd></div>
+                  <div><dt>Settlement</dt><dd>T+0</dd></div>
+                </dl>
+                <ul class="work-card__stack">
+                  <li>Solidity</li><li>ERC-3643</li><li>OpenZeppelin</li><li>Chainlink</li><li>Safe</li><li>Next.js</li>
+                </ul>
+                <a class="link-arrow" href="#contact" data-prefill-message="Hi! I'd love to see the full case study for the Tokenized Treasury Fund project.">Request the full case study <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+              </div>
+              <div class="work-card__visual" aria-hidden="true" data-reveal>
+                <div class="viz-panel">
+                  <div class="viz-panel__head">
+                    <div class="viz-asset">
+                      <span class="viz-asset__icon viz-asset__icon--violet">T</span>
+                      <div><span class="viz-label">Tokenized fund</span><strong>US T-Bill Fund</strong></div>
+                    </div>
+                    <span class="viz-pill">ERC-3643</span>
+                  </div>
+                  <div class="viz-kpis">
+                    <div><span class="viz-label">NAV / token</span><strong>$1.0412</strong></div>
+                    <div><span class="viz-label">AUM</span><strong>$26.4M</strong></div>
+                    <div><span class="viz-label">Investors</span><strong>1,284</strong></div>
+                  </div>
+                  <svg class="viz-chart viz-chart--step" viewBox="0 0 400 120" preserveAspectRatio="none">
+                    <defs><linearGradient id="rwa-fill" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#b59bff" stop-opacity=".3"/><stop offset="1" stop-color="#b59bff" stop-opacity="0"/></linearGradient></defs>
+                    <path d="M0 100 H28.6 V93.8 H57.1 V86.4 H85.7 V80.8 H114.3 V74 H142.9 V69 H171.4 V62.8 H200 V55.4 H228.6 V49.8 H257.1 V43 H285.7 V38 H314.3 V31.8 H342.9 V24.4 H371.4 V18.8 H400 V120 H0 Z" fill="url(#rwa-fill)"/>
+                    <path class="viz-chart__line" d="M0 100 H28.6 V93.8 H57.1 V86.4 H85.7 V80.8 H114.3 V74 H142.9 V69 H171.4 V62.8 H200 V55.4 H228.6 V49.8 H257.1 V43 H285.7 V38 H314.3 V31.8 H342.9 V24.4 H371.4 V18.8 H400"/>
+                  </svg>
+                  <ul class="viz-checks">
+                    <li><svg class="icon"><use href="#i-check"/></svg>Transfers limited to verified identities</li>
+                    <li><svg class="icon"><use href="#i-check"/></svg>Daily NAV published by oracle</li>
+                    <li><svg class="icon"><use href="#i-check"/></svg>Atomic USDC settlement</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 3 -->
+          <article class="work-card" style="--i: 2; --c1: #ff8ad8; --c2: #ffc979">
+            <div class="work-card__inner">
+              <div class="work-card__content" data-reveal>
+                <div class="work-card__meta" data-sample="Sample project">
+                  <span class="work-card__index">03</span>
+                  <span class="tag">NFT · Consumer</span>
+                  <span class="work-card__year">2024 · Base</span>
+                </div>
+                <h3 class="work-card__title">Gasless NFT Launchpad</h3>
+                <p class="work-card__role">Full-stack Web3 engineer · 10&#8209;week build</p>
+                <p class="work-card__desc">A consumer brand wanted a drop their non-crypto fans could actually use. I shipped ERC-721A contracts with gasless minting through an ERC-4337 paymaster, Merkle allowlists and a Next.js mint flow with embedded wallets, so no seed phrases were required.</p>
+                <dl class="work-card__metrics">
+                  <div><dt>Sold out in</dt><dd>4 min</dd></div>
+                  <div><dt>Mint gas vs. ERC-721</dt><dd>−61%</dd></div>
+                  <div><dt>First-time wallets</dt><dd>72%</dd></div>
+                </dl>
+                <ul class="work-card__stack">
+                  <li>Solidity</li><li>ERC-721A</li><li>ERC-4337</li><li>viem</li><li>wagmi</li><li>IPFS</li>
+                </ul>
+                <a class="link-arrow" href="#contact" data-prefill-message="Hi! I'd love to see the full case study for the Gasless NFT Launchpad project.">Request the full case study <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+              </div>
+              <div class="work-card__visual" aria-hidden="true" data-reveal>
+                <div class="nft-grid">
+                  <span class="nft" style="--h1: 330; --h2: 260; --x: 30%; --y: 28%"></span>
+                  <span class="nft nft--ring" style="--h1: 40; --h2: 330; --x: 64%; --y: 40%"></span>
+                  <span class="nft nft--square" style="--h1: 190; --h2: 250; --x: 46%; --y: 62%"></span>
+                  <span class="nft nft--square" style="--h1: 280; --h2: 20; --x: 70%; --y: 30%"></span>
+                  <span class="nft" style="--h1: 160; --h2: 220; --x: 40%; --y: 45%"></span>
+                  <span class="nft nft--ring" style="--h1: 310; --h2: 200; --x: 35%; --y: 70%"></span>
+                  <span class="nft nft--ring" style="--h1: 20; --h2: 280; --x: 55%; --y: 35%"></span>
+                  <span class="nft nft--square" style="--h1: 220; --h2: 300; --x: 28%; --y: 40%"></span>
+                  <span class="nft" style="--h1: 45; --h2: 340; --x: 62%; --y: 64%"></span>
+                </div>
+                <div class="viz-panel viz-panel--float">
+                  <div class="viz-panel__head">
+                    <span class="viz-label">Genesis mint</span>
+                    <span class="viz-pill viz-pill--up">Sold out</span>
+                  </div>
+                  <div class="viz-progress"><i></i></div>
+                  <div class="viz-meta"><span>10,000 / 10,000</span><span>4m 12s</span></div>
+                  <div class="viz-gasless"><svg class="icon"><use href="#i-zap"/></svg>Gasless via ERC-4337 paymaster</div>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 4 -->
+          <article class="work-card" style="--i: 3; --c1: #7ab8ff; --c2: #7cf8d6">
+            <div class="work-card__inner">
+              <div class="work-card__content" data-reveal>
+                <div class="work-card__meta" data-sample="Sample project">
+                  <span class="work-card__index">04</span>
+                  <span class="tag">Staking</span>
+                  <span class="work-card__year">2024 · Solana</span>
+                </div>
+                <h3 class="work-card__title">Solana Liquid Staking</h3>
+                <p class="work-card__role">Rust / Anchor engineer · 3&#8209;month engagement</p>
+                <p class="work-card__desc">A validator collective needed a liquid staking token with instant exits. I wrote the Anchor program for stake-pool deposits, epoch-based reward accrual and an instant-unstake liquidity pool, plus a TypeScript SDK that integrators adopted in days.</p>
+                <dl class="work-card__metrics">
+                  <div><dt>SOL staked</dt><dd>410K</dd></div>
+                  <div><dt>Unique stakers</dt><dd>46K</dd></div>
+                  <div><dt>Program uptime</dt><dd>99.98%</dd></div>
+                </dl>
+                <ul class="work-card__stack">
+                  <li>Rust</li><li>Anchor</li><li>Solana</li><li>TypeScript</li><li>Pyth</li><li>Helius</li>
+                </ul>
+                <a class="link-arrow" href="#contact" data-prefill-message="Hi! I'd love to see the full case study for the Solana Liquid Staking project.">Request the full case study <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+              </div>
+              <div class="work-card__visual" aria-hidden="true" data-reveal>
+                <div class="orbit">
+                  <span class="orbit__ring orbit__ring--1"><i></i><i></i></span>
+                  <span class="orbit__ring orbit__ring--2"><i></i><i></i><i></i></span>
+                  <span class="orbit__ring orbit__ring--3"><i></i><i></i><i></i><i></i></span>
+                  <span class="orbit__core">◎</span>
+                </div>
+                <div class="viz-panel viz-panel--float viz-panel--bottom">
+                  <div class="viz-kpis">
+                    <div><span class="viz-label">Staked</span><strong>412,580 SOL</strong></div>
+                    <div><span class="viz-label">APY</span><strong>7.4%</strong></div>
+                    <div><span class="viz-label">Validators</span><strong>32</strong></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <div class="work-cta" data-reveal>
+          <p>Have something similar in mind?</p>
+          <a class="btn btn--ghost" href="#contact">Let's talk about your project <svg class="icon icon--arrow" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================== TESTIMONIALS ============================== -->
+    <section class="section section--quotes" id="testimonials" aria-labelledby="quotes-title">
+      <div class="container">
+        <header class="section-head section-head--center">
+          <p class="eyebrow" data-scramble>03 / Kind words</p>
+          <h2 class="section-title" id="quotes-title" data-reveal>Don't just take <em class="accent">my word for it.</em></h2>
+        </header>
+
+        <!-- EDIT: replace with real client quotes (with their permission) and delete data-sample, or remove this section -->
+        <div class="quotes" data-stagger="100">
+          <figure class="card spot quote quote--featured" data-reveal>
+            <span class="quote__mark" aria-hidden="true">“</span>
+            <blockquote class="quote__text">
+              <p>We came in with a whiteboard sketch and left with an audited, live protocol in nine weeks. Our auditors told us it was one of the cleanest codebases they'd reviewed all year. Zero high-severity findings.</p>
+            </blockquote>
+            <figcaption class="quote__author" data-sample="Sample quote">
+              <span class="avatar" style="--h: 165" aria-hidden="true">CN</span>
+              <span><strong>James Anderson</strong><span>CTO · DeFi protocol</span></span>
+            </figcaption>
+          </figure>
+
+          <figure class="card spot quote" data-reveal>
+            <blockquote class="quote__text">
+              <p>Weekly demos, clear trade-offs, no surprises. It felt like having a senior in-house engineer from day one, at a fraction of the hiring time.</p>
+            </blockquote>
+            <figcaption class="quote__author" data-sample="Sample quote">
+              <span class="avatar" style="--h: 265" aria-hidden="true">CN</span>
+              <span><strong>Michael Carter</strong><span>Founder · NFT platform</span></span>
+            </figcaption>
+          </figure>
+
+          <figure class="card spot quote" data-reveal>
+            <blockquote class="quote__text">
+              <p>The pre-audit review caught a reentrancy path in our legacy vault that three previous reviewers had missed. That alone paid for the engagement many times over.</p>
+            </blockquote>
+            <figcaption class="quote__author" data-sample="Sample quote">
+              <span class="avatar" style="--h: 215" aria-hidden="true">CN</span>
+              <span><strong>Daniel Bennett</strong><span>Head of Engineering · Fintech</span></span>
+            </figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================== CRAFT / CODE ============================== -->
+    <section class="section section--craft" id="craft" aria-labelledby="craft-title">
+      <div class="container">
+        <header class="section-head section-head--split">
+          <p class="eyebrow" data-scramble>04 / Craft</p>
+          <h2 class="section-title" id="craft-title" data-reveal>Code your auditors will <em class="accent">thank you for.</em></h2>
+          <p class="section-lead" data-reveal>One feature, three layers. Explore a production-style Merkle airdrop (contract, fuzz tests and React hook) and the reasoning behind the lines that matter. It compiles, and every test passes.</p>
+        </header>
+
+        <div class="craft">
+          <div class="window code-window" data-reveal>
+            <div class="window-bar code-window__bar">
+              <span class="dots" aria-hidden="true"><i></i><i></i><i></i></span>
+              <div class="tabs" role="tablist" aria-label="Code samples">
+                <button class="tab" type="button" role="tab" id="tab-sol" aria-selected="true" aria-controls="panel-sol" data-status="Compiles with solc 0.8.28 · 100% line &amp; branch coverage" data-status-meta="Solidity">MerkleDistributor.sol</button>
+                <button class="tab" type="button" role="tab" id="tab-test" aria-selected="false" aria-controls="panel-test" tabindex="-1" data-status="2 tests passed · 10,000 fuzz runs each" data-status-meta="Foundry">MerkleDistributor.t.sol</button>
+                <button class="tab" type="button" role="tab" id="tab-ts" aria-selected="false" aria-controls="panel-ts" tabindex="-1" data-status="tsc --strict · 0 errors against viem 2 + wagmi 3" data-status-meta="TypeScript">useClaimAirdrop.ts</button>
+              </div>
+            </div>
+            <div class="code-panels">
+              <div class="code-panel is-active" role="tabpanel" id="panel-sol" aria-labelledby="tab-sol" tabindex="0">
+<pre class="code"><code data-lang="sol">// SPDX-License-Identifier: MIT
+pragma solidity 0.8.28;
+
+import {IERC20} from "@openzeppelin/contracts/token/ERC20/IERC20.sol";
+import {SafeERC20} from "@openzeppelin/contracts/token/ERC20/utils/SafeERC20.sol";
+import {MerkleProof} from "@openzeppelin/contracts/utils/cryptography/MerkleProof.sol";
+
+/// @notice Gas-efficient airdrop: one bit of storage per claim.
+contract MerkleDistributor {
+    using SafeERC20 for IERC20;
+
+    error AlreadyClaimed(uint256 index);
+    error InvalidProof();
+    event Claimed(uint256 indexed index, address indexed account, uint256 amount);
+
+    IERC20 public immutable token;
+    bytes32 public immutable merkleRoot;
+    mapping(uint256 =&gt; uint256) private claimedBitMap; // 256 flags per slot
+
+    constructor(IERC20 token_, bytes32 merkleRoot_) {
+        token = token_;
+        merkleRoot = merkleRoot_;
+    }
+
+    function isClaimed(uint256 index) public view returns (bool) {
+        return (claimedBitMap[index &gt;&gt; 8] &amp; (1 &lt;&lt; (index &amp; 0xff))) != 0;
+    }
+
+    function claim(uint256 index, uint256 amount, bytes32[] calldata proof) external {
+        if (isClaimed(index)) revert AlreadyClaimed(index);
+
+        // Double-hashed leaf rules out second-preimage attacks on the tree.
+        bytes32 leaf =
+            keccak256(bytes.concat(keccak256(abi.encode(index, msg.sender, amount))));
+        if (!MerkleProof.verifyCalldata(proof, merkleRoot, leaf)) revert InvalidProof();
+
+        claimedBitMap[index &gt;&gt; 8] |= 1 &lt;&lt; (index &amp; 0xff); // effects first…
+        token.safeTransfer(msg.sender, amount);           // …interaction last
+        emit Claimed(index, msg.sender, amount);
+    }
+}</code></pre>
+              </div>
+              <div class="code-panel" role="tabpanel" id="panel-test" aria-labelledby="tab-test" tabindex="0" inert>
+<pre class="code"><code data-lang="sol">// SPDX-License-Identifier: MIT
+pragma solidity 0.8.28;
+
+import {Test} from "forge-std/Test.sol";
+import {ERC20Mock} from "./mocks/ERC20Mock.sol";
+import {MerkleDistributor} from "../src/MerkleDistributor.sol";
+
+contract MerkleDistributorTest is Test {
+    ERC20Mock internal token = new ERC20Mock();
+
+    /// Any valid leaf pays out exactly once, for every fuzzed input.
+    function testFuzz_ClaimOnce(uint256 index, address user, uint96 amount) public {
+        vm.assume(user != address(0));
+        assumeNotForgeAddress(user);
+
+        // Single-leaf tree: the root *is* the leaf, so the proof is empty.
+        bytes32 leaf =
+            keccak256(bytes.concat(keccak256(abi.encode(index, user, amount))));
+        MerkleDistributor drop = new MerkleDistributor(token, leaf);
+        token.mint(address(drop), amount);
+
+        vm.prank(user);
+        drop.claim(index, amount, new bytes32[](0));
+        assertEq(token.balanceOf(user), amount);
+        assertTrue(drop.isClaimed(index));
+
+        vm.prank(user);
+        vm.expectRevert(
+            abi.encodeWithSelector(MerkleDistributor.AlreadyClaimed.selector, index)
+        );
+        drop.claim(index, amount, new bytes32[](0));
+    }
+
+    function testFuzz_RejectsForgedProof(bytes32 root, uint96 amount) public {
+        MerkleDistributor drop = new MerkleDistributor(token, root);
+        vm.expectRevert(MerkleDistributor.InvalidProof.selector);
+        drop.claim(0, amount, new bytes32[](1));
+    }
+}</code></pre>
+              </div>
+              <div class="code-panel" role="tabpanel" id="panel-ts" aria-labelledby="tab-ts" tabindex="0" inert>
+<pre class="code"><code data-lang="ts">import { BaseError, ContractFunctionRevertedError, type Address, type Hex } from "viem";
+import {
+  useSimulateContract,
+  useWaitForTransactionReceipt,
+  useWriteContract,
+} from "wagmi";
+import { distributorAbi } from "./abi"; // `as const` → typed end to end
+
+type Claim = { index: bigint; amount: bigint; proof: Hex[] };
+
+export function useClaimAirdrop(distributor: Address, claim?: Claim) {
+  // 1 · Simulate first: a revert surfaces before the wallet ever opens.
+  const simulation = useSimulateContract({
+    address: distributor,
+    abi: distributorAbi,
+    functionName: "claim",
+    args: claim ? [claim.index, claim.amount, claim.proof] : undefined,
+    query: { enabled: Boolean(claim) },
+  });
+
+  const { writeContract, data: hash, isPending } = useWriteContract();
+  const receipt = useWaitForTransactionReceipt({ hash });
+
+  // 2 · Decode custom errors into product states — never raw hex.
+  const failure = simulation.error instanceof BaseError
+    ? simulation.error.walk((e) =&gt; e instanceof ContractFunctionRevertedError)
+    : null;
+  const reason =
+    failure instanceof ContractFunctionRevertedError ? failure.data?.errorName : null;
+
+  return {
+    claim: () =&gt; simulation.data &amp;&amp; writeContract(simulation.data.request),
+    alreadyClaimed: reason === "AlreadyClaimed",
+    invalidProof: reason === "InvalidProof",
+    status: receipt.isSuccess ? "confirmed"
+      : receipt.isLoading ? "confirming"
+      : isPending ? "signing" : "idle",
+  } as const;
+}</code></pre>
+              </div>
+            </div>
+            <div class="code-window__status">
+              <span class="code-window__check"><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg><span class="code-window__status-text">Compiles with solc 0.8.28 · 100% line &amp; branch coverage</span></span>
+              <span class="code-window__meta">Solidity</span>
+            </div>
+          </div>
+
+          <div class="notes">
+            <div class="notes__sticky">
+              <p class="notes__hint"><svg class="icon" aria-hidden="true"><use href="#i-target"/></svg>Hover or tap a note to highlight its code</p>
+
+              <ol class="notes__list" data-for="panel-sol">
+                <li class="note" tabindex="0" data-lines="18,25-27,37">
+                  <span class="note__num">01</span>
+                  <div><h3>Bitmap claims</h3><p>256 claim flags share one storage slot. Most claims flip a bit in a slot that's already in use instead of initializing a fresh one, which saves about 17k gas each.</p></div>
+                </li>
+                <li class="note" tabindex="0" data-lines="16-17,20-23">
+                  <span class="note__num">02</span>
+                  <div><h3>Immutable configuration</h3><p>Token and root live in bytecode, not storage. That means no cold storage reads on the hot path, and no admin key that could swap them later.</p></div>
+                </li>
+                <li class="note" tabindex="0" data-lines="32-35">
+                  <span class="note__num">03</span>
+                  <div><h3>Second-preimage safe</h3><p>Leaves are double-hashed (OpenZeppelin's standard tree format), so an internal node can never be replayed as a valid leaf.</p></div>
+                </li>
+                <li class="note" tabindex="0" data-lines="12-13,30,35">
+                  <span class="note__num">04</span>
+                  <div><h3>Custom errors</h3><p>Cheaper than revert strings and ABI-decodable, so the front-end can say “Already claimed” instead of “execution reverted”.</p></div>
+                </li>
+                <li class="note" tabindex="0" data-lines="30,37-39">
+                  <span class="note__num">05</span>
+                  <div><h3>Checks → effects → interactions</h3><p>Validate, record the claim, then transfer. Even a token with transfer hooks can't re-enter for a second payout.</p></div>
+                </li>
+              </ol>
+
+              <ol class="notes__list" data-for="panel-test" hidden>
+                <li class="note" tabindex="0" data-lines="11-12">
+                  <span class="note__num">01</span>
+                  <div><h3>Property-based fuzzing</h3><p>10,000 random index / user / amount combinations per run. The property has to hold for every one of them, not just a happy path.</p></div>
+                </li>
+                <li class="note" tabindex="0" data-lines="16-20">
+                  <span class="note__num">02</span>
+                  <div><h3>Fixture-free trees</h3><p>A one-leaf tree's root is the leaf itself, so every fuzz run builds its own valid airdrop. No brittle JSON fixtures.</p></div>
+                </li>
+                <li class="note" tabindex="0" data-lines="22-25">
+                  <span class="note__num">03</span>
+                  <div><h3>Outcomes, not internals</h3><p>Asserts what users care about: the tokens arrived and the claim is recorded.</p></div>
+                </li>
+                <li class="note" tabindex="0" data-lines="27-31">
+                  <span class="note__num">04</span>
+                  <div><h3>Exact revert matching</h3><p>Checks the custom error <em>and</em> its argument. A test that passes on any revert proves nothing.</p></div>
+                </li>
+                <li class="note" tabindex="0" data-lines="34-38">
+                  <span class="note__num">05</span>
+                  <div><h3>Adversarial inputs</h3><p>Random roots with forged proofs must fail closed, every single time.</p></div>
+                </li>
+              </ol>
+
+              <ol class="notes__list" data-for="panel-ts" hidden>
+                <li class="note" tabindex="0" data-lines="12-19">
+                  <span class="note__num">01</span>
+                  <div><h3>Simulate before signing</h3><p>Every claim is dry-run against live chain state first. Users never sign (or pay gas for) a transaction that would revert.</p></div>
+                </li>
+                <li class="note" tabindex="0" data-lines="7,9">
+                  <span class="note__num">02</span>
+                  <div><h3>Typed end to end</h3><p>The ABI is a <code>const</code>, so function names and argument types are checked at compile time against the deployed contract.</p></div>
+                </li>
+                <li class="note" tabindex="0" data-lines="24-29,33-34">
+                  <span class="note__num">03</span>
+                  <div><h3>Readable failures</h3><p>Custom errors decode into product states like “Already claimed”, never a raw hex blob.</p></div>
+                </li>
+                <li class="note" tabindex="0" data-lines="21-22,35-37">
+                  <span class="note__num">04</span>
+                  <div><h3>Explicit lifecycle</h3><p>Signing → confirming → confirmed. The UI always knows exactly where the transaction is.</p></div>
+                </li>
+              </ol>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================== PROCESS ============================== -->
+    <section class="section" id="process" aria-labelledby="process-title">
+      <div class="container process">
+        <div class="process__intro">
+          <div class="process__sticky">
+            <p class="eyebrow" data-scramble>05 / Process</p>
+            <h2 class="section-title" id="process-title" data-reveal>A process built for <em class="accent">zero surprises.</em></h2>
+            <p class="section-lead" data-reveal>Fixed scope, clear milestones and weekly demos, with security designed in from day one rather than bolted on the week before launch.</p>
+            <div class="process__cta" data-reveal>
+              <a class="btn btn--primary" href="#contact">Book a free discovery call <svg class="icon icon--arrow" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+              <p class="process__note"><svg class="icon" aria-hidden="true"><use href="#i-clock"/></svg>Typical build: 4–10 weeks from kickoff to mainnet</p>
+            </div>
+          </div>
+        </div>
+
+        <ol class="steps" id="steps">
+          <li class="step" data-reveal>
+            <span class="step__node">01</span>
+            <div class="step__body card">
+              <div class="step__head"><h3>Discovery &amp; scoping</h3><span class="step__time">1–3 days</span></div>
+              <p>We map goals, users and risks together. You get a scoped plan, an architecture sketch and a fixed quote before you commit to anything.</p>
+              <ul class="step__deliverables"><li>Scope document</li><li>Threat model</li><li>Fixed quote</li></ul>
+            </div>
+          </li>
+          <li class="step" data-reveal>
+            <span class="step__node">02</span>
+            <div class="step__body card">
+              <div class="step__head"><h3>Architecture &amp; spec</h3><span class="step__time">~1 week</span></div>
+              <p>Contract design, storage layout, upgrade and admin strategy, and a test plan, all reviewed with your team before a line of production code is written.</p>
+              <ul class="step__deliverables"><li>Technical spec</li><li>System diagrams</li><li>Test plan</li></ul>
+            </div>
+          </li>
+          <li class="step" data-reveal>
+            <span class="step__node">03</span>
+            <div class="step__body card">
+              <div class="step__head"><h3>Build &amp; test</h3><span class="step__time">2–6 weeks</span></div>
+              <p>Test-driven development with weekly demos on a public testnet. You see real progress every week, not a big reveal at the end.</p>
+              <ul class="step__deliverables"><li>Contracts</li><li>Unit · fuzz · invariant tests</li><li>Weekly demos</li></ul>
+            </div>
+          </li>
+          <li class="step" data-reveal>
+            <span class="step__node">04</span>
+            <div class="step__body card">
+              <div class="step__head"><h3>Harden &amp; audit</h3><span class="step__time">1–2 weeks</span></div>
+              <p>Static analysis, symbolic execution and an internal review. I prepare the audit package, coordinate with the auditors and verify every fix.</p>
+              <ul class="step__deliverables"><li>Coverage report</li><li>Audit package</li><li>Fix verification</li></ul>
+            </div>
+          </li>
+          <li class="step" data-reveal>
+            <span class="step__node">05</span>
+            <div class="step__body card">
+              <div class="step__head"><h3>Launch &amp; support</h3><span class="step__time">Ongoing</span></div>
+              <p>Deterministic deployments, verified source, monitoring and alerting, and an incident runbook. Thirty days of post-launch support included.</p>
+              <ul class="step__deliverables"><li>Mainnet deployment</li><li>Monitoring</li><li>Incident runbook</li></ul>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ============================== ABOUT ============================== -->
+    <section class="section section--about" id="about" aria-labelledby="about-title">
+      <div class="container">
+        <div class="about">
+          <aside class="card profile" data-reveal aria-label="Profile">
+            <div class="profile__banner" aria-hidden="true">
+              <svg class="profile__banner-mark"><use href="#i-logo"/></svg>
+            </div>
+            <!-- EDIT: swap the monogram for your photo:
+                 <div class="profile__avatar"><img src="assets/img/avatar.jpg" alt="Max Allen" width="96" height="96"></div> -->
+            <div class="profile__avatar profile__avatar--initials" aria-hidden="true"><span>MA</span></div>
+            <div class="profile__id">
+              <h3 class="profile__name">Max Allen</h3>
+            </div>
+            <p class="profile__role">Senior Blockchain Engineer</p>
+            <dl class="profile__meta" data-sample="Sample details">
+              <div><dt><svg class="icon" aria-hidden="true"><use href="#i-pin"/></svg>Based in</dt><dd>Remote · Worldwide</dd></div>
+              <!-- data-tz: IANA time zone · data-tz-label: how the zone is shown -->
+              <div><dt><svg class="icon" aria-hidden="true"><use href="#i-clock"/></svg>Local time</dt><dd data-local-time data-tz="Asia/Singapore" data-tz-label="SGT (UTC+8)">SGT (UTC+8)</dd></div>
+              <div><dt><svg class="icon" aria-hidden="true"><use href="#i-briefcase"/></svg>Experience</dt><dd>7 yrs · Web3 since 2019</dd></div>
+              <div><dt><svg class="icon" aria-hidden="true"><use href="#i-calendar"/></svg>Next opening</dt><dd><span class="status-dot" aria-hidden="true"></span>November 2026</dd></div>
+            </dl>
+            <!-- EDIT: social links (the command menu reads these too) -->
+            <div class="profile__social">
+              <a class="social-btn" href="https://github.com/maxallen687" target="_blank" rel="noopener" data-link="github" aria-label="GitHub"><svg class="icon" aria-hidden="true"><use href="#i-github"/></svg></a>
+              <a class="social-btn" href="https://t.me/maxallen919" target="_blank" rel="noopener" data-link="telegram" aria-label="Telegram"><svg class="icon" aria-hidden="true"><use href="#i-telegram"/></svg></a>
+            </div>
+          </aside>
+
+          <div class="about__body">
+            <p class="eyebrow" data-scramble>06 / About</p>
+            <h2 class="section-title" id="about-title" data-reveal>Engineer first. <em class="accent">Security obsessed.</em></h2>
+            <!-- EDIT: your story -->
+            <div class="about__text" data-reveal data-sample="Sample bio">
+              <p>I've spent seven years building systems where a single bug can cost millions. I started in high-throughput fintech back-ends, moved on-chain in 2019, and have since shipped DeFi protocols, tokenization platforms and consumer NFT products used by hundreds of thousands of wallets.</p>
+              <p>Clients bring me in when the stakes are high: a protocol about to hold real money, a launch date that can't slip, or an audit that has to go well. I work as an embedded senior partner who challenges assumptions, explains trade-offs in plain English and owns outcomes, not just tickets.</p>
+            </div>
+
+            <ul class="principles" data-stagger="90">
+              <li class="principle" data-reveal>
+                <span class="principle__icon"><svg class="icon" aria-hidden="true"><use href="#i-shield"/></svg></span>
+                <div><h3>Security is a feature</h3><p>Threat-model first. Every external call is guilty until proven innocent.</p></div>
+              </li>
+              <li class="principle" data-reveal>
+                <span class="principle__icon"><svg class="icon" aria-hidden="true"><use href="#i-flask"/></svg></span>
+                <div><h3>Tests are the spec</h3><p>Unit, fuzz and invariant tests define what “correct” means, before code ships.</p></div>
+              </li>
+              <li class="principle" data-reveal>
+                <span class="principle__icon"><svg class="icon" aria-hidden="true"><use href="#i-message"/></svg></span>
+                <div><h3>Plain-English updates</h3><p>Weekly demos and written updates that non-engineers can act on.</p></div>
+              </li>
+              <li class="principle" data-reveal>
+                <span class="principle__icon"><svg class="icon" aria-hidden="true"><use href="#i-target"/></svg></span>
+                <div><h3>Own the outcome</h3><p>Success means your launch goes smoothly, not how many commits I made.</p></div>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="toolbox" data-reveal>
+          <div class="toolbox__head">
+            <h3>Toolbox</h3>
+            <p>The stack I reach for daily, and know deeply.</p>
+          </div>
+          <div class="toolbox__grid">
+            <div class="toolbox__group">
+              <h4>Languages</h4>
+              <ul class="chips"><li>Solidity</li><li>Rust</li><li>TypeScript</li><li>Yul</li><li>Vyper</li><li>Go</li></ul>
+            </div>
+            <div class="toolbox__group">
+              <h4>Frameworks</h4>
+              <ul class="chips"><li>Foundry</li><li>Hardhat</li><li>Anchor</li><li>OpenZeppelin</li><li>Next.js</li><li>Node.js</li></ul>
+            </div>
+            <div class="toolbox__group">
+              <h4>Security</h4>
+              <ul class="chips"><li>Slither</li><li>Echidna</li><li>Halmos</li><li>Certora</li><li>Aderyn</li><li>Tenderly</li></ul>
+            </div>
+            <div class="toolbox__group">
+              <h4>Web3 infra</h4>
+              <ul class="chips"><li>viem</li><li>wagmi</li><li>The Graph</li><li>Chainlink</li><li>LayerZero</li><li>Safe</li></ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================== ENGAGEMENTS ============================== -->
+    <section class="section" id="engage" aria-labelledby="engage-title">
+      <div class="container">
+        <header class="section-head section-head--center">
+          <p class="eyebrow" data-scramble>07 / Engagements</p>
+          <h2 class="section-title" id="engage-title" data-reveal>Flexible ways to <em class="accent">work together.</em></h2>
+          <p class="section-lead" data-reveal>A full build, a long-term partner or a second pair of eyes before audit. Pick the model that fits where you are.</p>
+        </header>
+
+        <div class="plans" data-stagger="110">
+          <article class="card spot plan" data-reveal>
+            <span class="plan__icon"><svg class="icon" aria-hidden="true"><use href="#i-box"/></svg></span>
+            <h3 class="plan__name">Fixed-scope build</h3>
+            <p class="plan__desc">A clearly defined product, delivered end to end at a fixed price.</p>
+            <p class="plan__meta"><span>Typical</span>3–10 weeks</p>
+            <ul class="plan__list">
+              <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Architecture &amp; technical spec</li>
+              <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Contracts with full test suite</li>
+              <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Deployment &amp; source verification</li>
+              <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>30 days of post-launch support</li>
+            </ul>
+            <a class="btn btn--ghost btn--block" href="#contact" data-prefill-need="Smart contracts">Get a fixed quote</a>
+          </article>
+
+          <article class="card spot plan plan--featured" data-reveal>
+            <span class="plan__badge">Most popular</span>
+            <span class="plan__icon"><svg class="icon" aria-hidden="true"><use href="#i-layers"/></svg></span>
+            <h3 class="plan__name">Dedicated retainer</h3>
+            <p class="plan__desc">A senior blockchain engineer embedded in your team, month to month.</p>
+            <p class="plan__meta"><span>Typical</span>3+ months</p>
+            <ul class="plan__list">
+              <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Reserved weekly capacity</li>
+              <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Architecture &amp; code reviews</li>
+              <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Priority Slack / Telegram access</li>
+              <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Pause or cancel with 30 days' notice</li>
+            </ul>
+            <a class="btn btn--primary btn--block" href="#contact" data-prefill-need="Retainer">Reserve capacity <svg class="icon icon--arrow" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+          </article>
+
+          <article class="card spot plan" data-reveal>
+            <span class="plan__icon"><svg class="icon" aria-hidden="true"><use href="#i-shield"/></svg></span>
+            <h3 class="plan__name">Security review</h3>
+            <p class="plan__desc">An independent, line-by-line review before your audit, or after an incident.</p>
+            <p class="plan__meta"><span>Typical</span>1–3 weeks</p>
+            <ul class="plan__list">
+              <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Manual review &amp; threat model</li>
+              <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Fuzz &amp; invariant test suite</li>
+              <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Severity-ranked report</li>
+              <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Fix verification</li>
+            </ul>
+            <a class="btn btn--ghost btn--block" href="#contact" data-prefill-need="Security review">Request a review</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================== FAQ ============================== -->
+    <section class="section" id="faq" aria-labelledby="faq-title">
+      <div class="container faq">
+        <div class="faq__intro">
+          <p class="eyebrow" data-scramble>08 / FAQ</p>
+          <h2 class="section-title" id="faq-title" data-reveal>Questions, <em class="accent">answered.</em></h2>
+          <p class="section-lead" data-reveal>Can't find what you're looking for? <a class="text-link" href="mailto:maxallen03919@gmail.com">Email me</a> and I'll get back to you within a day.</p>
+        </div>
+
+        <div class="faq__list" data-reveal>
+          <details class="faq__item" name="faq" open>
+            <summary>Which chains and languages do you work with?<span class="faq__icon" aria-hidden="true"></span></summary>
+            <div class="faq__a"><p>Primarily EVM chains (Ethereum, Arbitrum, Optimism, Base, Polygon, zkSync and more) in Solidity and Yul, plus Solana programs in Rust with Anchor. Front-ends are TypeScript with Next.js, viem and wagmi.</p></div>
+          </details>
+          <details class="faq__item" name="faq">
+            <summary>How do you price projects?<span class="faq__icon" aria-hidden="true"></span></summary>
+            <div class="faq__a"><p>Most builds are fixed-price after a free discovery call, so you know the total cost up front. Ongoing work runs on a monthly retainer, and security reviews are quoted by scope and complexity.</p></div>
+          </details>
+          <details class="faq__item" name="faq">
+            <summary>I'm a non-technical founder. Is that a problem?<span class="faq__icon" aria-hidden="true"></span></summary>
+            <div class="faq__a"><p>Not at all. Many of my clients are non-technical. I translate technical trade-offs into business decisions and send plain-English updates every week, so you're never guessing where things stand.</p></div>
+          </details>
+          <details class="faq__item" name="faq">
+            <summary>Can you work with my existing team or codebase?<span class="faq__icon" aria-hidden="true"></span></summary>
+            <div class="faq__a"><p>Yes. I regularly join existing teams, review legacy contracts and pair with in-house engineers, adapting to your tooling, Git workflow and rituals.</p></div>
+          </details>
+          <details class="faq__item" name="faq">
+            <summary>Will my contracts be audited?<span class="faq__icon" aria-hidden="true"></span></summary>
+            <div class="faq__a"><p>Everything I write is audit-ready: fully tested, documented and statically analyzed. For anything that will hold significant value, I strongly recommend an independent audit, and I can introduce you to reputable firms and manage the process end to end.</p></div>
+          </details>
+          <details class="faq__item" name="faq">
+            <summary>Do you sign NDAs?<span class="faq__icon" aria-hidden="true"></span></summary>
+            <div class="faq__a"><p>Absolutely. I'm happy to sign your NDA before we discuss details, or I can provide a mutual one.</p></div>
+          </details>
+          <details class="faq__item" name="faq">
+            <summary>What happens after launch?<span class="faq__icon" aria-hidden="true"></span></summary>
+            <div class="faq__a"><p>Every build includes 30 days of post-launch support. After that, many clients keep me on a light retainer for upgrades, monitoring and incident response.</p></div>
+          </details>
+          <details class="faq__item" name="faq">
+            <summary>How soon can you start?<span class="faq__icon" aria-hidden="true"></span></summary>
+            <div class="faq__a"><p>I take on a limited number of clients at a time to keep quality high. I'm currently booking projects for Q4 2026, so reach out early to secure a slot.</p></div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================== CONTACT ============================== -->
+    <section class="section section--contact" id="contact" aria-labelledby="contact-title">
+      <div class="contact__glow" aria-hidden="true"></div>
+      <div class="container contact">
+        <div class="contact__intro">
+          <p class="eyebrow" data-scramble>09 / Contact</p>
+          <h2 class="section-title" id="contact-title" data-reveal>Let's build something <em class="accent">unbreakable.</em></h2>
+          <p class="section-lead" data-reveal>Tell me about your project. You'll hear back within 24 hours with next steps, usually a short call followed by a fixed-scope proposal.</p>
+
+          <!-- EDIT: contact channels -->
+          <ul class="channels" data-stagger="80">
+            <li class="channel" data-reveal>
+              <span class="channel__icon"><svg class="icon" aria-hidden="true"><use href="#i-mail"/></svg></span>
+              <span class="channel__text"><span class="channel__label">Email</span><a class="channel__value" href="mailto:maxallen03919@gmail.com" data-link="email">maxallen03919@gmail.com</a></span>
+              <button class="channel__action" type="button" data-copy="maxallen03919@gmail.com" aria-label="Copy email address"><svg class="icon" aria-hidden="true"><use href="#i-copy"/></svg><span>Copy</span></button>
+            </li>
+            <li class="channel" data-reveal>
+              <span class="channel__icon"><svg class="icon" aria-hidden="true"><use href="#i-telegram"/></svg></span>
+              <span class="channel__text"><span class="channel__label">Telegram</span><a class="channel__value" href="https://t.me/maxallen919" target="_blank" rel="noopener">@maxallen919</a></span>
+              <a class="channel__action" href="https://t.me/maxallen919" target="_blank" rel="noopener" aria-label="Open Telegram chat"><svg class="icon" aria-hidden="true"><use href="#i-arrow-up-right"/></svg><span>Open</span></a>
+            </li>
+            <li class="channel" data-reveal>
+              <span class="channel__icon"><svg class="icon" aria-hidden="true"><use href="#i-calendar"/></svg></span>
+              <span class="channel__text"><span class="channel__label">Book a call</span><a class="channel__value" href="https://cal.com/yourhandle/discovery" target="_blank" rel="noopener" data-link="calendar">30-min discovery call</a></span>
+              <a class="channel__action" href="https://cal.com/yourhandle/discovery" target="_blank" rel="noopener" aria-label="Schedule a discovery call"><svg class="icon" aria-hidden="true"><use href="#i-arrow-up-right"/></svg><span>Schedule</span></a>
+            </li>
+          </ul>
+
+          <ol class="next-steps" data-reveal>
+            <li><span>1</span><div><strong>Within 24 hours</strong>I reply with questions or a call link.</div></li>
+            <li><span>2</span><div><strong>30-minute call</strong>We scope goals, risks and timeline.</div></li>
+            <li><span>3</span><div><strong>48 hours later</strong>You receive a fixed-price proposal.</div></li>
+          </ol>
+        </div>
+
+        <!-- EDIT: set data-email; optionally set data-endpoint to a Formspree / Web3Forms URL (see README) -->
+        <form class="card form" id="contact-form" data-email="maxallen03919@gmail.com" data-endpoint="" novalidate data-reveal>
+          <div class="form__fields">
+            <div class="form__row">
+              <div class="field">
+                <label for="f-name">Name</label>
+                <input id="f-name" name="name" type="text" autocomplete="name" required placeholder="Satoshi Nakamoto">
+              </div>
+              <div class="field">
+                <label for="f-email">Email</label>
+                <input id="f-email" name="email" type="email" autocomplete="email" required placeholder="you@protocol.xyz">
+              </div>
+            </div>
+            <div class="field">
+              <label for="f-company">Company or project <span class="optional">optional</span></label>
+              <input id="f-company" name="company" type="text" autocomplete="organization" placeholder="Protocol name or website">
+            </div>
+            <fieldset class="field">
+              <legend>What do you need?</legend>
+              <div class="choices">
+                <label class="choice"><input type="checkbox" name="need" value="Smart contracts"><span>Smart contracts</span></label>
+                <label class="choice"><input type="checkbox" name="need" value="DeFi protocol"><span>DeFi protocol</span></label>
+                <label class="choice"><input type="checkbox" name="need" value="Security review"><span>Security review</span></label>
+                <label class="choice"><input type="checkbox" name="need" value="dApp front-end"><span>dApp front-end</span></label>
+                <label class="choice"><input type="checkbox" name="need" value="Retainer"><span>Ongoing retainer</span></label>
+                <label class="choice"><input type="checkbox" name="need" value="Other"><span>Something else</span></label>
+              </div>
+            </fieldset>
+            <fieldset class="field">
+              <legend>Budget</legend>
+              <div class="choices">
+                <label class="choice"><input type="radio" name="budget" value="Under $10k"><span>&lt; $10k</span></label>
+                <label class="choice"><input type="radio" name="budget" value="$10k–$25k"><span>$10k–25k</span></label>
+                <label class="choice"><input type="radio" name="budget" value="$25k–$50k"><span>$25k–50k</span></label>
+                <label class="choice"><input type="radio" name="budget" value="$50k+"><span>$50k+</span></label>
+              </div>
+            </fieldset>
+            <div class="field">
+              <label for="f-message">Project details</label>
+              <textarea id="f-message" name="message" rows="5" required placeholder="What are you building, what's the timeline, and where can I help?"></textarea>
+            </div>
+            <button class="btn btn--primary btn--lg btn--block form__submit" type="submit">
+              <span>Send inquiry</span><svg class="icon icon--arrow" aria-hidden="true"><use href="#i-arrow"/></svg>
+            </button>
+            <p class="form__status" role="alert" aria-live="assertive"></p>
+            <p class="form__fine"><svg class="icon" aria-hidden="true"><use href="#i-lock"/></svg>Your details stay private. Happy to sign an NDA first.</p>
+          </div>
+
+          <div class="form__success" hidden tabindex="-1">
+            <span class="form__success-icon"><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg></span>
+            <h3 data-success-title>Thanks, your message is on its way.</h3>
+            <p data-success-text>I'll reply within 24 hours.</p>
+            <button class="btn btn--ghost" type="button" data-form-reset>Send another message</button>
+          </div>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============================== FOOTER ============================== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__top">
+        <div class="footer__brand">
+          <a class="brand" href="#top" aria-label="Max Allen — back to top">
+            <svg class="brand__mark" aria-hidden="true"><use href="#i-logo"/></svg>
+            <span class="brand__name">Max Allen</span>
+          </a>
+          <p class="footer__tagline">Secure smart contracts and dApps for teams that can't afford to get it wrong.</p>
+          <p class="footer__live"><span class="status-dot" aria-hidden="true"></span>Synced with Ethereum <span data-chain-block>#—</span></p>
+        </div>
+        <nav class="footer__col" aria-label="Footer">
+          <h2 class="footer__title">Navigate</h2>
+          <ul class="footer__links">
+            <li><a href="#services">Services</a></li>
+            <li><a href="#work">Selected work</a></li>
+            <li><a href="#craft">Code samples</a></li>
+            <li><a href="#process">Process</a></li>
+            <li><a href="#faq">FAQ</a></li>
+          </ul>
+        </nav>
+        <div class="footer__col">
+          <h2 class="footer__title">Elsewhere</h2>
+          <ul class="footer__links">
+            <li><a href="https://github.com/maxallen687" target="_blank" rel="noopener">GitHub <svg class="icon" aria-hidden="true"><use href="#i-arrow-up-right"/></svg></a></li>
+            <li><a href="https://t.me/maxallen919" target="_blank" rel="noopener">Telegram <svg class="icon" aria-hidden="true"><use href="#i-arrow-up-right"/></svg></a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h2 class="footer__title">Start a project</h2>
+          <ul class="footer__links">
+            <li><a href="mailto:maxallen03919@gmail.com">maxallen03919@gmail.com</a></li>
+            <li><a href="https://cal.com/yourhandle/discovery" target="_blank" rel="noopener">Book a discovery call</a></li>
+            <li class="footer__palette-item"><button class="footer__palette" type="button" data-palette-open>Command menu <kbd><span data-mod-key>⌘</span>K</kbd></button></li>
+          </ul>
+        </div>
+      </div>
+
+      <p class="footer__wordmark" aria-hidden="true">Max Allen</p>
+
+      <div class="footer__bottom">
+        <p>© <span data-year>2026</span> Max Allen. All rights reserved.</p>
+        <p>No trackers. No cookies. Just code.</p>
+        <a class="footer__top-link" href="#top">Back to top <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Mobile sticky CTA -->
+  <div class="mobile-cta" id="mobile-cta">
+    <span class="mobile-cta__status"><span class="status-dot" aria-hidden="true"></span>Available Q4 2026</span>
+    <a class="btn btn--primary btn--sm" href="#contact" tabindex="-1">Start a project</a>
+  </div>
+
+  <!-- Command palette -->
+  <div class="palette" id="palette" hidden>
+    <div class="palette__backdrop" data-palette-close></div>
+    <div class="palette__panel" role="dialog" aria-modal="true" aria-label="Command menu">
+      <div class="palette__search">
+        <svg class="icon" aria-hidden="true"><use href="#i-search"/></svg>
+        <input id="palette-input" type="text" placeholder="Type a command or search…" role="combobox" aria-expanded="true" aria-controls="palette-list" aria-autocomplete="list" autocomplete="off" spellcheck="false">
+        <kbd>esc</kbd>
+      </div>
+      <ul class="palette__list" id="palette-list" role="listbox" aria-label="Commands"></ul>
+      <div class="palette__foot">
+        <span><kbd>↑</kbd><kbd>↓</kbd>navigate</span>
+        <span><kbd>↵</kbd>select</span>
+        <span><kbd>esc</kbd>close</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="assets/js/main.js" defer></script>
+</body>
+</html>
